@@ -34,15 +34,15 @@ namespace Shapes
 		{
 			if (a > b && a > c)
 			{
-				return a * a == b * b + c * c;
+				return Math.Abs(a * a - (b * b + c * c)) <= double.Epsilon;
 			}
 			else if (b > a && b > c)
 			{
-				return b * b == a * a + c * c;
+				return Math.Abs(b * b - (a * a + c * c)) <= double.Epsilon;
 			}
 			else
 			{
-				return c * c == a * a + b * b;
+				return Math.Abs(c * c - (a * a + b * b)) <= double.Epsilon;
 			}
 		}
 
